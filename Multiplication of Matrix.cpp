@@ -5,17 +5,23 @@ int main()
     int m,n,o,p; //row and column
     cout<<"Order of First Matrix : ";
     cin>>m>>n;
-    int A[m][n];
     cout<<"Order of Second Matrix : ";
     cin>>o>>p;
-    int B[o][p];
-    int C[m][p];
+
 
     if(n!=o){
-        cout<<"It is not Posible to make Multiplication."<<endl;
-        cout<<"Input First Matrix's column size is equal to second Matrix's row size....";
+        cout<<endl<<"It is not Posible to make Multiplication."<<endl;
+        cout<<"Input First Matrix's column size is equal to second Matrix's row size...."<<endl<<endl;
+        cout<<"Order of First Matrix : ";
+        cin>>m>>n;
+        cout<<"Order of Second Matrix : ";
+        cin>>o>>p;
+
     }
-    else{
+    if(n==o){
+        int A[m][n];
+        int B[o][p];
+        int C[m][p];
         cout<<"Input First Matrix : "<<endl;
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
@@ -54,7 +60,9 @@ int main()
             }
             cout<<endl;
         }
+
     }
+    else cout<<"Sorry, You will try Again.......";
 }
 
 
